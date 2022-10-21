@@ -15,6 +15,7 @@ import {
     useColorModeValue,
     InputGroup,
     InputRightElement,
+    FormHelperText,
   } from '@chakra-ui/react';
   import { Link as Routerlink, Navigate, useNavigate } from 'react-router-dom';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
@@ -110,8 +111,9 @@ const handleSubmit=()=>{
               p={8}>
               <Stack spacing={4}>
                 <FormControl id="email">
-                  <FormLabel>User-name</FormLabel>
+                  <FormLabel>User-Name</FormLabel>
                   <Input type="text" value={name} onChange={(e)=>setName(e.target.value)}  />
+                  <FormHelperText>Please Enter your User-name</FormHelperText>
                 </FormControl>
                 <FormControl id="password">
                   <FormLabel>Password</FormLabel>
@@ -128,6 +130,7 @@ const handleSubmit=()=>{
                         </Button>
                       </InputRightElement>
                     </InputGroup>
+                    <FormHelperText>Please Enter Password</FormHelperText>
                 </FormControl>
                 <Stack spacing={10}>
                   
