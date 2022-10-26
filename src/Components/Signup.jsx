@@ -77,27 +77,31 @@ const Signup = () => {
               "poinid":5
             }
           })
+          .then(()=>{
+            let refferal=reffer[0]
+            fetch(`https://refferaldata.herokuapp.com/user/points`,{
+             method:"PATCH",
+             headers:{
+               "Accepted":"application/json",
+               "Content-Type":"application/json",
+               "refid":`${refferal}`,
+               "poinid":10
+             }
+           })
+          })
          }})
          .then(()=>{
-           let refferal=reffer[0]
-           fetch(`https://refferaldata.herokuapp.com/user/points`,{
-            method:"PATCH",
-            headers:{
-              "Accepted":"application/json",
-              "Content-Type":"application/json",
-              "refid":`${refferal}`,
-              "poinid":10
-            }
+          toast({
+            title: 'Account created',
+            description: "Thankyou for signup",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
           })
+          navigate("/login")
          })
-         .then(()=>navigate("/login"))
-         toast({
-          title: 'Account created.',
-          description: "We've created your account for you.",
-          status: 'success',
-          duration: 9000,
-          isClosable: true,
-        })
+         
+         
         
       }
 
@@ -167,7 +171,7 @@ const Signup = () => {
                       <FormControl id="firstName" isRequired>
                         <FormLabel>Username</FormLabel>
                         <Input type="text" value={data.name} onChange={(e)=>handleChange(e)} name="name" />
-                        <FormHelperText>Please Enter your Name</FormHelperText>
+                        <FormHelperText>Please Enter your Username</FormHelperText>
                       </FormControl>
                     </Box>
                     <Box>
