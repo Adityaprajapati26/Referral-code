@@ -33,7 +33,7 @@
 I built this Assignment with the help of React for Frontent and Backend in Express for Data storage MongoDb the whole flow of the website End to end
 I unable to do with Wordpress but I am willing and dedicate to learn the new tecnolodgy. Please consider it.
 
-#Deployed-Link:-https://refferal-code-monitor.netlify.app/Login
+#Deployed-Link:-https://refferalassignmrnt1.netlify.app/Login
 
 Thank You.
 
